@@ -1,8 +1,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>GLPOO3A</groupId>
-  <artifactId>GLPOO3A</artifactId>
+  <groupId>GLPOO-ESIEA</groupId>
+  <artifactId>GLPOO-ESIEA</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>GLPOOESIEA3A</name>
-  <description>Projet génie logiciel</description>
+  <name>GLPOO</name>
+  <description>Projet genie logiciel ESIEA 3A</description>
+  
+  <dependencies>
+		<dependency>
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		    <version>4.12</version>
+		    <scope>test</scope>
+		</dependency>
+</dependencies>
+  
 </project>
+
