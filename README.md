@@ -4,64 +4,21 @@
 
 Description du sujet
 
-  - Type some Markdown on the left
-  - See HTML in the right
-  - Magic
+L’idée est d’utiliser les historiques des tirages, disponibles gratuitement sur le site de la fdj, pour faire des dessins. On peut par exemple dire que le boules correspondent à des formes (carrés, ronds, icones, etc.) et les étoiles à des rotations. On peut aussi dire que la première boule correspond à une forme et que les autres boules correspondent à des coordonnées ou des couleurs. Les possibilités ne manquent pas. On peut même combiner plusieurs tirages pour faire des dessins plus complexes.
+Il faudra aussi afficher les tirages sous forme de tableau dans votre logiciel. Cela vous permettra de choisir un ou plusieurs tirages pour faire vos dessins. Et bien entendu, vous pouvez fabriquer ou générer vos propres tirages, ne serait-ce que pour les tests.
+
+### Liste des membres du projet
+
+* [Toure Mahamadoun Ibrahima] - HTML enhanced for web apps!
+* [Thierry Leriche Dessirier] - awesome web-based text editor
+* [Falcou Julie] - Markdown parser done right. Fast and easy to extend.
+* [VARATHARAJAH Iynthurisha] - great UI boilerplate for modern web apps
+* [TCHUENBOU KOMGUEP Gabrielle Renée] - evented I/O for the backend
+* [CHAMOINRI Ifuja] - fast node.js network app framework [@tjholowaychuk]
+* [DESRIVIERES Arnaud] - the streaming build system
+* [FIRMIN Jacques-Olivier] - duh
 
 
-Markdown is a lightweight markup language based on the formatting conventions that people naturally use in email.  As [John Gruber] writes on the [Markdown site][df1]
-
-> The overriding design goal for Markdown's
-> formatting syntax is to make it as readable
-> as possible. The idea is that a
-> Markdown-formatted document should be
-> publishable as-is, as plain text, without
-> looking like it's been marked up with tags
-> or formatting instructions.
-
-This text you see here is *actually* written in Markdown! To get a feel for Markdown's syntax, type some text into the left window and watch the results in the right.
-
-### Tech
-
-Dillinger uses a number of open source projects to work properly:
-
-* [AngularJS] - HTML enhanced for web apps!
-* [Ace Editor] - awesome web-based text editor
-* [markdown-it] - Markdown parser done right. Fast and easy to extend.
-* [Twitter Bootstrap] - great UI boilerplate for modern web apps
-* [node.js] - evented I/O for the backend
-* [Express] - fast node.js network app framework [@tjholowaychuk]
-* [Gulp] - the streaming build system
-* [Breakdance](http://breakdance.io) - HTML to Markdown converter
-* [jQuery] - duh
- - Toure Mahamadoun Ibrahima
- - Thierry Leriche Dessirier (Product Owner) 
- - Falcou Julie( Proxy Product Owner)
- - VARATHARAJAH Iynthurisha
- - TCHUENBOU KOMGUEP Gabrielle Renée
- - CHAMOINRI Ifuja
- - DESRIVIERES Arnaud
- - FIRMIN Jacques-Olivier
- 
-
-
-## Live demo
-The project is hosted at [Openshift](http://milhoes-kingarthurpt.rhcloud.com/) and will be receiving any commit to *master branch*.
-
-## Implemented features
-- A crawler to feed the database with the latest draw results;
-- Statistics calculation;
-
-## Upcoming features
-- Probabilities calculation;
-- Lucky numbers generator;
-- Abstraction to adapt to other types of draws;
-- Public REST API;
-
-
-
-And of course Dillinger itself is open source with a [public repository][dill]
- on GitHub.
 
 ### Installation
 
@@ -119,8 +76,41 @@ $ gulp watch
 ```sh
 $ karma test
 ```
+#### Building for source
+For production release:
+```sh
+$ gulp build --prod
+```
+Generating pre-built zip archives for distribution:
+```sh
+$ gulp build dist --prod
+```
+### Docker
+Dillinger is very easy to install and deploy in a Docker container.
 
+By default, the Docker will expose port 8080, so change this within the Dockerfile if necessary. When ready, simply use the Dockerfile to build the image.
 
+```sh
+cd dillinger
+docker build -t joemccann/dillinger:${package.json.version}
+```
+This will create the dillinger image and pull in the necessary dependencies. Be sure to swap out `${package.json.version}` with the actual version of Dillinger.
+
+Once done, run the Docker image and map the port to whatever you wish on your host. In this example, we simply map port 8000 of the host to port 8080 of the Docker (or whatever port was exposed in the Dockerfile):
+
+```sh
+docker run -d -p 8000:8080 --restart="always" <youruser>/dillinger:${package.json.version}
+```
+
+Verify the deployment by navigating to your server address in your preferred browser.
+
+```sh
+127.0.0.1:8000
+```
+
+#### Kubernetes + Google Cloud
+
+See [KUBERNETES.md](https://github.com/joemccann/dillinger/blob/master/KUBERNETES.md)
 
 
 ### Todos
@@ -139,19 +129,23 @@ ESIEA
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
 
-   [dill]: <https://github.com/joemccann/dillinger>
-   [git-repo-url]: <https://github.com/joemccann/dillinger.git>
-   [john gruber]: <http://daringfireball.net>
-   [df1]: <http://daringfireball.net/projects/markdown/>
-   [markdown-it]: <https://github.com/markdown-it/markdown-it>
-   [Ace Editor]: <http://ace.ajax.org>
-   [node.js]: <http://nodejs.org>
-   [Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>
+   [Toure Mahamadoun Ibrahima]: <https://github.com/joemccann/dillinger>
+   [Thierry Leriche Dessirier]: <https://github.com/joemccann/dillinger.git>
+   [Falcou Julie]: <http://daringfireball.net>
+   [VARATHARAJAH Iynthurisha]: <http://daringfireball.net/projects/markdown/>
+   [TCHUENBOU KOMGUEP Gabrielle Renée]: <https://github.com/markdown-it/markdown-it>
+   [CHAMOINRI Ifuja]: <http://ace.ajax.org>
+   [DESRIVIERES Arnaud]: <http://nodejs.org>
+   [FIRMIN Jacques-Olivier]: <http://twitter.github.com/bootstrap/>
    [jQuery]: <http://jquery.com>
    [@tjholowaychuk]: <http://twitter.com/tjholowaychuk>
    [express]: <http://expressjs.com>
    [AngularJS]: <http://angularjs.org>
    [Gulp]: <http://gulpjs.com>
+
+
+
+
 
    [PlDb]: <https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md>
    [PlGh]: <https://github.com/joemccann/dillinger/tree/master/plugins/github/README.md>
