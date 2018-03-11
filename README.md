@@ -9,14 +9,14 @@ Il faudra aussi afficher les tirages sous forme de tableau dans votre logiciel. 
 
 ### Liste des membres du projet
 
-* [Toure Mahamadoun Ibrahima] - HTML enhanced for web apps!
-* [Thierry Leriche Dessirier] - awesome web-based text editor
-* [Falcou Julie] - Markdown parser done right. Fast and easy to extend.
-* [VARATHARAJAH Iynthurisha] - great UI boilerplate for modern web apps
-* [TCHUENBOU KOMGUEP Gabrielle Renée] - evented I/O for the backend
-* [CHAMOINRI Ifuja] - fast node.js network app framework [@tjholowaychuk]
-* [DESRIVIERES Arnaud] - the streaming build system
-* [FIRMIN Jacques-Olivier] - duh
+* [Toure Mahamadoun Ibrahima] - 
+* [Thierry Leriche Dessirier] - 
+* [Falcou Julie] - 
+* [VARATHARAJAH Iynthurisha] - 
+* [TCHUENBOU KOMGUEP Gabrielle Renée] - 
+* [CHAMOINRI Ifuja] - 
+* [DESRIVIERES Arnaud] - 
+* [FIRMIN Jacques-Olivier] -
 
 
 
@@ -39,84 +39,23 @@ $ npm install --production
 $ NODE_ENV=production node app
 ```
 
-### Plugins
+### Dependance maven
 
 Dillinger is currently extended with the following plugins. Instructions on how to use them in your own application are linked below.
 
 | Plugin | README |
 | ------ | ------ |
-| Dropbox | [plugins/dropbox/README.md][PlDb] |
+| Maven | [plugins/dropbox/README.md][PlDb] |
 | Github | [plugins/github/README.md][PlGh] |
-| Google Drive | [plugins/googledrive/README.md][PlGd] |
-| OneDrive | [plugins/onedrive/README.md][PlOd] |
-| Medium | [plugins/medium/README.md][PlMe] |
-| Google Analytics | [plugins/googleanalytics/README.md][PlGa] |
+| Junit | [plugins/googledrive/README.md][PlGd] |
+| Log4j | [plugins/onedrive/README.md][PlOd] |
 
 
-### Development
-
-Want to contribute? Great!
-
-Dillinger uses Gulp + Webpack for fast developing.
-Make a change in your file and instantanously see your updates!
-
-Open your favorite Terminal and run these commands.
-
-First Tab:
-```sh
-$ node app
-```
-
-Second Tab:
-```sh
-$ gulp watch
-```
-
-(optional) Third:
-```sh
-$ karma test
-```
-#### Building for source
-For production release:
-```sh
-$ gulp build --prod
-```
-Generating pre-built zip archives for distribution:
-```sh
-$ gulp build dist --prod
-```
-### Docker
-Dillinger is very easy to install and deploy in a Docker container.
-
-By default, the Docker will expose port 8080, so change this within the Dockerfile if necessary. When ready, simply use the Dockerfile to build the image.
-
-```sh
-cd dillinger
-docker build -t joemccann/dillinger:${package.json.version}
-```
-This will create the dillinger image and pull in the necessary dependencies. Be sure to swap out `${package.json.version}` with the actual version of Dillinger.
-
-Once done, run the Docker image and map the port to whatever you wish on your host. In this example, we simply map port 8000 of the host to port 8080 of the Docker (or whatever port was exposed in the Dockerfile):
-
-```sh
-docker run -d -p 8000:8080 --restart="always" <youruser>/dillinger:${package.json.version}
-```
-
-Verify the deployment by navigating to your server address in your preferred browser.
-
-```sh
-127.0.0.1:8000
-```
-
-#### Kubernetes + Google Cloud
-
-See [KUBERNETES.md](https://github.com/joemccann/dillinger/blob/master/KUBERNETES.md)
-
-
-### Todos
+### To-do
 
  - Write MORE Tests
  - Add Night Mode
+
 
 License
 ----
