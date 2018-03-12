@@ -77,6 +77,8 @@ ESIEA 2017-2018
    [CHAMOINRI Ifuja]: <https://www.linkedin.com/in/ifuja-chamoinri-771447154/>
    [DESRIVIERES Arnaud]: <#>
    [FIRMIN Jacques-Olivier]: <#>
+   [FOGNO BOPDA'A Ulrich Ivanick]: <#>
+   
    
    
    [maven]: <https://maven.apache.org>
