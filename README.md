@@ -63,7 +63,6 @@ Ceci est la liste des dépendances utilisé pour le projet.
  - Ecriture des test
  - Chargement du csv
 
-
 License
 ----
 
