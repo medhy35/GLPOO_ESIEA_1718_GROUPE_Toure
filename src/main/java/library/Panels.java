@@ -1,4 +1,4 @@
-package Swings;
+package library;
 
 
 import java.awt.*;
@@ -17,8 +17,9 @@ public class Panels extends JPanel {
 	 */
 		
 	public Panels (int width, int lenght, String color) {					
-		this.setPreferredSize(new Dimension(width, lenght));										//On dimensionne le panneau
+		this.setPreferredSize(new Dimension(width, lenght));																					//On dimensionne le panneau
 		this.setBackground(new Color(Colors.choose_color(color).get(0),Colors.choose_color(color).get(1),Colors.choose_color(color).get(2)));	//On colorie le panneau
 	}
 	
 }
+
