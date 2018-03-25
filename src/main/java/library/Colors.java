@@ -1,4 +1,4 @@
-package Swings;
+package library;
 
 import java.util.ArrayList;
 
@@ -27,6 +27,14 @@ public class Colors {
 				break;
 			case "red" :
 				code_color.add(255);
+				code_color.add(0);
+				code_color.add(0);
+			case "white":
+				code_color.add(255);
+				code_color.add(255);
+				code_color.add(255);
+			case "black":
+				code_color.add(0);
 				code_color.add(0);
 				code_color.add(0);
 			default :

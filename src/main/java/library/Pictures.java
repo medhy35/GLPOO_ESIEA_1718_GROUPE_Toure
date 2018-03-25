@@ -1,4 +1,4 @@
-package Swings;
+package library;
 
 import java.awt.Color;
 
