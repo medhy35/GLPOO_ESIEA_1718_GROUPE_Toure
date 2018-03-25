@@ -61,7 +61,6 @@ public class CsvTirageDao {
 	public List<Tirage> findAllTirages() {
 		final List<Tirage> tirages = new ArrayList<Tirage>();
 
-		
 		List<String> ligne;
 		try {
 			ligne = lectureFichier();
@@ -85,7 +84,6 @@ public class CsvTirageDao {
 			e.printStackTrace();
 		}
 
-		
 		return tirages;
 	}
 }
