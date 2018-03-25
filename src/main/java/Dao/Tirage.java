@@ -14,7 +14,5 @@ public interface Tirage {
 	
 	int getEtoile1();
 	
-	int getEtoile2();
-	
-	
+	int getEtoile2();	
 }

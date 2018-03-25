@@ -27,7 +27,7 @@ public class CsvTirageDaoTest {
 		Assert.assertEquals(referenceSize,rowSize);
 	}
 	
-	@Test
+	
 	public void test_fake() {
 		final int referenceSize =151;
 		
@@ -35,15 +35,8 @@ public class CsvTirageDaoTest {
 		
 		Assert.assertEquals(referenceSize,rowSize);
 	}
+
 	
-	@Test
-	public void test_Tirages1() {
-		final int referenceSize =151;
-		
-		final int rowSize = dao.findAllTirages().size();
-		
-		Assert.assertEquals(referenceSize,rowSize);
-	}
 	
 
 }
