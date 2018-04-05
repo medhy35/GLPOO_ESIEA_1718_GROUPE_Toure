@@ -1,16 +1,31 @@
 package swings;
 
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
+
 import javax.swing.*;
 import library.*;
+import research.Research;
+import treatement.Tirage;
 
 public class Research_interface {
 
+	/**
+	 * @author	Julie
+	 * 
+	 * Création d'une IHM permettant le lancement des recherches
+	 * 
+	 * @param	Tableau csv traité
+	 * @return	Ne retourne rien / Lancement de Research	
+	 */
 	
-	public Research_interface(){
+	public Research_interface(final ArrayList<Tirage> path){
 		
 		//Initialisation de la fenêtre
-		Windows window_research = new Windows("Team JIJI DRAUM : Eurodroo ",500,500);
+		final Windows window_research = new Windows("Team JIJI DRAUM : Eurodroo ",500,500);
 		
 		//Initialisation des panneaux
 		Panels main_panel = new Panels(500,500,"blue");
@@ -26,35 +41,34 @@ public class Research_interface {
 		JLabel draw_number_label = Labels.create_label("Numéro de tirage : ","Tahoma",11,"red","white");
 		JLabel date_label = Labels.create_label("Date :","Tahoma",11,"red","white");
 		JLabel winners_label = Labels.create_label("Gagnant(s) :","Tahoma",11,"red","white");
-		JLabel rang_round_label = Labels.create_label("Rang boule :","Tahoma",11,"red","white");
+		JLabel rang_round_label = Labels.create_label("Numero boule :","Tahoma",11,"red","white");
 		JLabel number_winners_label = Labels.create_label("Nombre de gagnant :","Tahoma",11,"red","white");
 		JLabel my_million_label = Labels.create_label("Numéro My million : ","Tahoma",11,"red","white");
-		JLabel star_label = Labels.create_label("Rang étoile :","Tahoma",11,"red","white");
+		JLabel star_label = Labels.create_label("Numero étoile :","Tahoma",11,"red","white");
 		
 		//Initialisation des zones de textes
-		JTextField draw_number_text = Labels.create_textfield("0");
-		JTextField my_million_text = Labels.create_textfield("0");
-		JTextField number_winners_text = Labels.create_textfield("0");
+		final JTextField draw_number_text = Labels.create_textfield("0");
+		final JTextField my_million_text = Labels.create_textfield("0");
+		final JTextField number_winners_text = Labels.create_textfield("0");
 		
 		//Initialisation des boutons
 		JButton research_button = Buttons.create_buttons("Recherche");
 		JButton return_button = Buttons.create_buttons("Retour");
-		JRadioButton panel_button = Buttons.create_radiobutton("Tableau","gold");
-		JRadioButton picture_button = Buttons.create_radiobutton("Schéma(s)","gold");
-		JRadioButton art_button = Buttons.create_radiobutton("Graphique","gold");
-		JComboBox<String> date_day_box = Buttons.create_ComboBox(new String[] { "Mardi", "Vendredi", "Inconnu" });
-		JComboBox<String> date_year_box = Buttons.create_ComboBox(new String[] { "2016", "2017", "2018", "Inconnue" });
-		JComboBox<String> date_month = Buttons.create_ComboBox(new String[] { "Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre", "Inconnu" });
-		JCheckBox round_box = Buttons.create_checkbox("Boule");
-		JCheckBox star_box = Buttons.create_checkbox("Etoile");
-		JCheckBox unknown_box = Buttons.create_checkbox("Inconnu");
-		JSpinner date_number_day_spinner = Buttons.create_spinner(0,0,31,1);
-		JSpinner rang_round_spinner = Buttons.create_spinner(0,0,13,1);
-		JSpinner star_spinner = Buttons.create_spinner(0,0,10,1);
+		final JRadioButton panel_button = Buttons.create_radiobutton("Tableau","gold");
+		final JRadioButton picture_button = Buttons.create_radiobutton("Schéma(s)","gold");
+		final JComboBox<String> date_day_box = Buttons.create_ComboBox(new String[] { "Mardi", "Vendredi", "Inconnu" });
+		final JComboBox<String> date_year_box = Buttons.create_ComboBox(new String[] { "2016", "2017", "2018", "Inconnue" });
+		final JComboBox<String> date_month = Buttons.create_ComboBox(new String[] { "Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre", "Inconnu" });
+		final JCheckBox round_box = Buttons.create_checkbox("Boule");
+		final JCheckBox star_box = Buttons.create_checkbox("Etoile");
+		final JCheckBox unknown_box = Buttons.create_checkbox("Inconnu");
+		final JSpinner date_number_day_spinner = Buttons.create_spinner(0,0,31,1);
+		final JSpinner round_spinner = Buttons.create_spinner(0,0,50,1);
+		final JSpinner star_spinner = Buttons.create_spinner(0,0,12,1);
 		@SuppressWarnings("unused")
 		ButtonGroup buttonGroup1 = Buttons.create_buttongroup2(round_box,star_box,unknown_box);
 		@SuppressWarnings("unused")
-		ButtonGroup buttonGroup2 = Buttons.create_buttongroup(panel_button,picture_button,art_button);
+		ButtonGroup buttonGroup2 = Buttons.create_buttongroup(panel_button,picture_button);
 		
 		//Positionnement général
         GroupLayout display_panelLayout = new GroupLayout(display_panel);
@@ -62,12 +76,11 @@ public class Research_interface {
         display_panelLayout.setHorizontalGroup(
         		display_panelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
         		.addGroup(display_panelLayout.createSequentialGroup()
-                .addGap(56, 56, 56)
+                .addGap(150, 150, 150)
                 .addComponent(panel_button)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 152, Short.MAX_VALUE)
                 .addComponent(picture_button)
                 .addGap(60, 60, 60)
-                .addComponent(art_button)
                 .addGap(59, 59, 59))
         		.addGroup(GroupLayout.Alignment.TRAILING, display_panelLayout.createSequentialGroup()
                 .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -81,7 +94,6 @@ public class Research_interface {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(display_panelLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                 .addComponent(picture_button)
-                .addComponent(art_button)
                 .addComponent(panel_button))
                 .addGap(0, 14, Short.MAX_VALUE)));     
 
@@ -121,7 +133,7 @@ public class Research_interface {
                 .addComponent(unknown_box)).addGroup(research_panelLayout.createSequentialGroup().addGap(10, 10, 10)
                 .addGroup(research_panelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
                 .addGroup(research_panelLayout.createSequentialGroup()
-                .addComponent(rang_round_spinner,GroupLayout.PREFERRED_SIZE, 37,GroupLayout.PREFERRED_SIZE)
+                .addComponent(round_spinner,GroupLayout.PREFERRED_SIZE, 37,GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18).addComponent(star_label)
                 .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(star_spinner,GroupLayout.PREFERRED_SIZE, 37,GroupLayout.PREFERRED_SIZE))
@@ -169,7 +181,7 @@ public class Research_interface {
                 .addComponent(unknown_box)).addGap(18, 18, 18)
                 .addGroup(research_panelLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                 .addComponent(rang_round_label)
-                .addComponent(rang_round_spinner,GroupLayout.PREFERRED_SIZE,GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE)
+                .addComponent(round_spinner,GroupLayout.PREFERRED_SIZE,GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE)
                 .addComponent(star_label)
                 .addComponent(star_spinner,GroupLayout.PREFERRED_SIZE,GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21).addGroup(research_panelLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
@@ -209,9 +221,46 @@ public class Research_interface {
         GroupLayout window_researchLayout = Positionings.create_grouplayout_since_panel (window_research, "complex", main_panel);
         window_research.setLayout(window_researchLayout);
 
+        //Utilisation des composants
+        
+        //Retour à l'interface précèdente
+        return_button.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		window_research.dispose();
+        		new Choice_interface(path);
+        	}
+        });
+        
+        //Lancement de la recherche
+        research_button.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		Integer draw_number = Integer.parseInt(draw_number_text.getText());
+        		Integer my_million = Integer.parseInt(my_million_text.getText());
+        		Integer number_winners = Integer.parseInt(number_winners_text.getText());
+        		String date_day = date_day_box.getSelectedItem().toString();
+        		String date_year = date_year_box.getSelectedItem().toString();
+        		String date_year_choice = date_month.getSelectedItem().toString();
+        		Integer date_number_day = Integer.parseInt(date_number_day_spinner.getValue().toString());
+        		Integer rang_round = Integer.parseInt(round_spinner.getValue().toString());
+        		Integer star = Integer.parseInt(star_spinner.getValue().toString());
+        		String checkbox_result = null;
+        		String representation = null;
+        		if (round_box.isSelected()) {
+        			checkbox_result = round_box.getText();}
+        		if (star_box.isSelected()) {
+        			checkbox_result = star_box.getText();}
+        		if (unknown_box.isSelected()) {
+        			checkbox_result = unknown_box.getText();}
+        		if (panel_button.isSelected()) {
+        			representation = panel_button.getText();}
+        		if (picture_button.isSelected()) {
+        			representation = picture_button.getText();}
+        		//On lance le traitement des données et du fichier csv
+        		new Research(draw_number,my_million,number_winners,date_day,date_year,date_year_choice,date_number_day,rang_round,star,
+    					checkbox_result,representation,path);
+        	}
+        }); 
+        
 	    }  
-	
-	public static void main(String[] args){
-		new Research_interface();	
-	}
+
 }

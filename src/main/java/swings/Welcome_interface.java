@@ -2,9 +2,12 @@ package swings;
 
 import javax.swing.*;
 import java.awt.event.*;
+import java.util.ArrayList;
 import library.*;
+import treatement.Tirage;
 
-public class Welcome_interface {
+
+public class Welcome_interface{
 	
 	/**
 	 * @author	Julie
@@ -14,7 +17,7 @@ public class Welcome_interface {
 	 * @return	Ne retourne rien (méthode void)	
 	 */
 	
-	public  Welcome_interface() {
+	public  Welcome_interface(final ArrayList<Tirage> path) {
 		
 		//Initialisation de la fenêtre
 		final Windows window_welcome = new Windows("Team JIJI DRAUM : Eurodroo ",500,500);
@@ -97,7 +100,7 @@ public class Welcome_interface {
 	app.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent evt) {
         	window_welcome.dispose();
-        	new Choice_interface();
+        	new Choice_interface(path);
         }});
 	
 	}

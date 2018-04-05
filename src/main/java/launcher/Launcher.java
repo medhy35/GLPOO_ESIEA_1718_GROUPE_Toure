@@ -1,6 +1,9 @@
 package launcher;
 
+import java.util.ArrayList;
 import swings.Welcome_interface;
+import treatement.CsvTirageDao;
+import treatement.Tirage;
 
 public class Launcher {
 	
@@ -13,7 +16,10 @@ public class Launcher {
 	 */
 
 	public static void main(String[] args) {
-		new Welcome_interface();
+		
+		ArrayList<Tirage> path = new ArrayList<>();
+		path = CsvTirageDao.getInstance().findAllTirages();
+		new Welcome_interface(path);
 	}
 
 }

@@ -6,7 +6,7 @@ import javax.swing.*;
 public class Buttons {
 
 	/**
-	 * @author	Julie
+	 * @author	Julie, Arnaud
 	 * 
 	 * Création d'un bouton 
 	 * @param	Les critères du bouton
@@ -47,11 +47,10 @@ public class Buttons {
 		return(component);
 	}
 	
-	public static ButtonGroup create_buttongroup(JRadioButton button1,JRadioButton button2,JRadioButton button3) {
+	public static ButtonGroup create_buttongroup(JRadioButton button1,JRadioButton button2) {
 		ButtonGroup component = new ButtonGroup();
 		component.add(button1);
 		component.add(button2);
-		component.add(button3);
 		return(component);
 	}
 	
@@ -62,5 +61,32 @@ public class Buttons {
 		component.add(button3);
 		return(component);
 	}
+	
+	public static JMenuBar create_menubar(JMenuItem Item1,JMenuItem Item2){
+		JMenuBar main_bar = new JMenuBar();
+		JMenu acces_button = new JMenu("Ficher");
+		acces_button.add(Item1);
+		acces_button.add(Item2);
+		main_bar.add(acces_button);
+		return (main_bar);
+	}
+	
+	public static JMenuBar create_menubar_bis(JMenuItem Item1,JMenuItem Item2,JMenuItem Item3,JMenuItem Item4,JMenuItem Item5,JMenuItem Item6,JMenuItem Item7,JMenuItem Item8){
+		JMenuBar main_bar = new JMenuBar();
+		JMenu acces_button = new JMenu("Ficher");
+		JMenu acces_button_bis = new JMenu("Catégories");
+		acces_button.add(Item1);
+		acces_button.add(Item2);
+		acces_button_bis.add(Item3);
+		acces_button_bis.add(Item4);
+		acces_button_bis.add(Item5);
+		acces_button_bis.add(Item6);
+		acces_button_bis.add(Item7);
+		acces_button_bis.add(Item8);
+		main_bar.add(acces_button);
+		main_bar.add(acces_button_bis);
+		return (main_bar);
+	}
+	
 	
 }

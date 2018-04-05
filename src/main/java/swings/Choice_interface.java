@@ -1,11 +1,11 @@
 package swings;
 
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+import java.util.ArrayList;
 import javax.swing.*;
 import library.*;
+import treatement.Tirage;
 
 public class Choice_interface {
 	
@@ -18,7 +18,7 @@ public class Choice_interface {
 	 * @return	Ne retourne rien (méthode void)	
 	 */
 
-	public Choice_interface() {
+	public Choice_interface(final ArrayList<Tirage> path) {
 		
 		//Initialisation de la fenêtre
 		final Windows window_choice = new Windows("Team JIJI DRAUM : Eurodroo ",500,500);
@@ -78,16 +78,17 @@ public class Choice_interface {
         reserch_draw_button.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent evt) {
             	window_choice.dispose();
-            	new Research_interface();
+            	new Research_interface(path);
             }});
         global_statistics_button.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent evt) {
-            	
+            	window_choice.dispose();
+            	new Statistics(path);
             }});
         come_back_button.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent evt) {
             	window_choice.dispose();
-            	new Welcome_interface();
+            	new Welcome_interface(path);
             }});
     	
        
