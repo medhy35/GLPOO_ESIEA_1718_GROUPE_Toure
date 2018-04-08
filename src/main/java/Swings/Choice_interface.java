@@ -2,26 +2,25 @@ package Swings;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import javax.swing.*;
 import Library.*;
-
-
-
+import Treatement.Tirage;
 
 public class Choice_interface {
 	
 	/**
 	 * @author	Julie
 	 * 
-	 * Cr�ation d'une IHM permettant le choix entre statistiques et recherches
+	 * Création d'une IHM permettant le choix entre statistiques et recherches
 	 * 
 	 * @param	string args
-	 * @return	Ne retourne rien (m�thode void)	
+	 * @return	Ne retourne rien (méthode void)	
 	 */
 
-	public Choice_interface() {
+	public Choice_interface(final ArrayList<Tirage> path) {
 		
-		//Initialisation de la fen�tre
+		//Initialisation de la fenêtre
 		final Windows window_choice = new Windows("Team JIJI DRAUM : Eurodroo ",500,500);
 		
 		//Initiatisation des panneaux
@@ -32,14 +31,14 @@ public class Choice_interface {
         
 		//Initialisation des boutons
 		JButton reserch_draw_button = Buttons.create_buttons("Rechercher un ou plusieurs tirage(s)");
-		JButton global_statistics_button = Buttons.create_buttons("Statistiques g�n�rales");
+		JButton global_statistics_button = Buttons.create_buttons("Statistiques générales");
 		JButton come_back_button = Buttons.create_buttons("Retour");
 		
 		//Initialisation de l'image
 		Pictures logo_bis2 = new Pictures();
         JLabel picture = logo_bis2.create_picture("src/main/resources/My_million_choice.jpg","blue");
 
-        //Positionnement des �l�ments
+        //Positionnement des éléments
         GroupLayout research_drawLayout =  Positionings.create_grouplayout_since_button(research_draw, "all", reserch_draw_button,0);
         research_draw.setLayout(research_drawLayout);
         
@@ -79,19 +78,19 @@ public class Choice_interface {
         reserch_draw_button.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent evt) {
             	window_choice.dispose();
-            	new Research_interface();
+            	new Research_interface(path);
             }});
         global_statistics_button.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent evt) {
-            	
+            	window_choice.dispose();
+            	new Statistics(path);
             }});
         come_back_button.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent evt) {
             	window_choice.dispose();
-            	new Welcome_interface();
+            	new Welcome_interface(path);
             }});
     	
        
 	} 
-
 }
