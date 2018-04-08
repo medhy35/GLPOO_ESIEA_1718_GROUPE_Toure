@@ -2,23 +2,24 @@ package Swings;
 
 import javax.swing.*;
 import java.awt.event.*;
+import java.util.ArrayList;
 import Library.*;
+import Treatement.Tirage;
 
 
-
-public class Welcome_interface {
+public class Welcome_interface{
 	
 	/**
 	 * @author	Julie
 	 * 
-	 * Cr�ation d'une IHM d'accueil
+	 * Création d'une IHM d'accueil
 	 * @param	string args
-	 * @return	Ne retourne rien (m�thode void)	
+	 * @return	Ne retourne rien (méthode void)	
 	 */
 	
-	public  Welcome_interface() {
+	public  Welcome_interface(final ArrayList<Tirage> path) {
 		
-		//Initialisation de la fen�tre
+		//Initialisation de la fenêtre
 		final Windows window_welcome = new Windows("Team JIJI DRAUM : Eurodroo ",500,500);
 		
 		//Initialisation des panneaux
@@ -32,20 +33,20 @@ public class Welcome_interface {
         
         //Initialisation des boutons 
         JButton exit = Buttons.create_buttons("Quitter");    
-        JButton app = Buttons.create_buttons("Acc�der � l'application");
+        JButton app = Buttons.create_buttons("Accéder à l'application");
         
 		//Initialisation des images
         Pictures logo_bis = new Pictures();
         JLabel logo = logo_bis.create_picture("src/main/resources/Accueil.png","blue");
        
-        //Positionnement des �l�ments
+        //Positionnement des éléments
         GroupLayout app_panelLayout =  Positionings.create_grouplayout_since_button(app_panel, "all", app,0);
         app_panel.setLayout(app_panelLayout);
         
         GroupLayout exit_panelLayout = Positionings.create_grouplayout_since_button(exit_panel, "short_all", exit,0);
         exit_panel.setLayout(exit_panelLayout);
 
-        //Positionnement g�n�ral
+        //Positionnement général
         GroupLayout panneau_principalLayout = new GroupLayout(main_panel);
         main_panel.setLayout(panneau_principalLayout);
         panneau_principalLayout.setHorizontalGroup(panneau_principalLayout
@@ -99,9 +100,8 @@ public class Welcome_interface {
 	app.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent evt) {
         	window_welcome.dispose();
-        	new Choice_interface();
+        	new Choice_interface(path);
         }});
 	
 	}
-
 }
