@@ -24,7 +24,8 @@ import java.util.Date;
 
 import org.junit.Assert;
 import org.junit.Test;
-import Treatement.CsvTirageDao;
+
+import treatement.CsvTirageDao;
 
 
 public class CSVTirageDaoTest1 {
