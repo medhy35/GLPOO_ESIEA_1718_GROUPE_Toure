@@ -1,6 +1,6 @@
 /*
  * Author: Gabrielle
- * Modèle utilisant les valeurs récupéreées dans le fichier CSV
+ * Modï¿½le utilisant les valeurs rï¿½cupï¿½reï¿½es dans le fichier CSV
  * 
  */
 
@@ -19,21 +19,19 @@ import treatement.Tirage;
 
 public class TirageModelFirst extends AbstractTableModel {
 
-	/**
-	 * serialVersionUID
-	 */
+	
 	private static final long serialVersionUID = 3485841928763403781L;
 	// Exemple de liste de tirage
 	private CsvTirageDao csv;
-	// Entête des colonnes
-	private final String[] entete = { "N° tirage", "N° MyMillion", "Jour", "Date", "Boule 1", "Boule 2", "Boule 3",
+	// Entï¿½te des colonnes
+	private final String[] entete = { "Nï¿½ tirage", "Nï¿½ MyMillion", "Jour", "Date", "Boule 1", "Boule 2", "Boule 3",
 			"Boule 4", "Boule 5", "Etoile 1", "Etoile 2" };
 	// Tableau de tirages
 	private ArrayList<Tirage> listTirage;
-	// Définition du mode d'affichage des dates
+	// Dï¿½finition du mode d'affichage des dates
 	SimpleDateFormat dateFormat = new SimpleDateFormat("EEEEEEEE");
 
-	// Appel d'une instance de la liste DAO et récupération de la liste
+	// Appel d'une instance de la liste DAO et rï¿½cupï¿½ration de la liste
 	public TirageModelFirst() {
 		super();
 		// dao = BidonTirageDao.getInstance();
@@ -48,7 +46,7 @@ public class TirageModelFirst extends AbstractTableModel {
 		return entete.length;
 	}
 
-	// Définition du nom des colonnes
+	// Dï¿½finition du nom des colonnes
 	@Override
 	public String getColumnName(int columnIndex) {
 		return entete[columnIndex];
@@ -61,8 +59,8 @@ public class TirageModelFirst extends AbstractTableModel {
 	}
 
 	/*
-	 * Récupération des tirages et des attributs de chaque tirage. On place chaque
-	 * élément dans la liste et la colonne qui lui correspond.
+	 * Rï¿½cupï¿½ration des tirages et des attributs de chaque tirage. On place chaque
+	 * ï¿½lï¿½ment dans la liste et la colonne qui lui correspond.
 	 */
 	@Override
 	public Object getValueAt(int rowIndex, int columnIndex) {
@@ -97,7 +95,7 @@ public class TirageModelFirst extends AbstractTableModel {
 		}
 	}
 
-	// Vérification des types de variables
+	// Vï¿½rification des types de variables
 	public Class<?> getColumnClass(int columnIndex) {
 
 		switch (columnIndex) {
@@ -122,7 +120,7 @@ public class TirageModelFirst extends AbstractTableModel {
 		}
 	}
 
-	// Getteur et Setteur de listTirage pour pouvoir la réutiliser
+	// Getteur et Setteur de listTirage pour pouvoir la rï¿½utiliser
 
 	public ArrayList<Tirage> getListTirage() {
 		return listTirage;

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 import display.Art;
-import display.Pictur;
+
 
 import display_path.TirageJFrame;
 import treatement.Tirage;

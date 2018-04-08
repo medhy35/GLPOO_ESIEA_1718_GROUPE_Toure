@@ -7,7 +7,7 @@ import java.util.*;
 public class CsvTirageDao {
 	
 	/**
-	 * @author	Medhi
+	 * @author	Medhy
 	 * @author	Gabrielle
 	 * 
 	 * Traitement du csv
@@ -25,7 +25,7 @@ public class CsvTirageDao {
 	}
 
 	public CsvTirageDao(String link2) {
-		this.link = link;
+	//	this.link = link;
 	}
 
 	public static synchronized CsvTirageDao getInstance() {

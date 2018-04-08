@@ -1,6 +1,17 @@
 package display;
 
+
+
 public class Donnee {
+	
+	/**
+	 * @author Iynthurisha
+	 * 
+	 * Fonction d'affichage
+	 * @param	etoile,hue,rotation,squareH,triangleH,triangleS
+	 * @return 	Rien
+	 **/
+	
 	Float depthLimit;
 	float hue,rotation,squareH,squareS,tringleH,tringleS;
 	

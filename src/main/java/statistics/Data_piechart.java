@@ -7,18 +7,25 @@ import treatement.Tirage;
 
 
 public class Data_piechart {
-
+	
+	/**
+	 * @author 	Ifuja
+	 * 
+	 * Affichage d'une pie chart quelconque
+	 * @param	Base de donï¿½es type PieDataset et un titre type String
+	 * @return 	PieChart type JFreeChart
+	 */
 
 	public static PieDataset result_round(ArrayList<Tirage> path){
 		//Initialisation de la base
 		DefaultPieDataset dataset = new DefaultPieDataset();
 		//Initialisation du nombre d'apparition
 		int compteur = 0;
-		//Parcours tous les numéros de boules possibles
+		//Parcours tous les numï¿½ros de boules possibles
 		for(int i=1;i<51;i++) {
 			//Parcours toutes les lignes du tableau
 			for(int j=0;j<path.toArray().length;j++) {
-				//Si l'élément apparaît on incrémente le compteur
+				//Si l'ï¿½lï¿½ment apparaï¿½t on incrï¿½mente le compteur
 				if(	path.get(j).getBoule1()==i||path.get(j).getBoule2()==i||
 					path.get(j).getBoule3()==i||path.get(j).getBoule4()==i||
 					path.get(j).getBoule5()==i){
@@ -27,9 +34,9 @@ public class Data_piechart {
 					
 				}
 			}
-			//Rajout des informations à la base
+			//Rajout des informations ï¿½ la base
 			dataset.setValue("Boule "+i, compteur);
-			//Remise à 0 du compteur
+			//Remise ï¿½ 0 du compteur
 			compteur=0;
 		}
 		return(dataset);
@@ -40,18 +47,18 @@ public class Data_piechart {
 		DefaultPieDataset dataset = new DefaultPieDataset();
 		//Initialisation du nombre d'apparition
 		int compteur = 0;
-		//Parcours tous les numéros de boules possibles
+		//Parcours tous les numï¿½ros de boules possibles
 		for(int i=1;i<13;i++) {
 			//Parcours toutes les lignes du tableau
 			for(int j=0;j<path.toArray().length;j++) {
-				//Si l'élément apparaît on incrémente le compteur
+				//Si l'ï¿½lï¿½ment apparaï¿½t on incrï¿½mente le compteur
 				if(	path.get(j).getEtoile1()==i||path.get(j).getEtoile2()==i) {
 					compteur = compteur + 1;
 				}
 			}
-			//Rajout des informations à la base
+			//Rajout des informations ï¿½ la base
 			dataset.setValue("Etoile "+i, compteur);
-			//Remise à 0 du compteur
+			//Remise ï¿½ 0 du compteur
 			compteur=0;
 		}
 		return(dataset);

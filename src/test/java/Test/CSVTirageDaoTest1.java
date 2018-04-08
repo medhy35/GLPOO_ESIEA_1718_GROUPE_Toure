@@ -29,6 +29,16 @@ import treatement.CsvTirageDao;
 
 
 public class CSVTirageDaoTest1 {
+	/**
+	 * @author 	Medhy
+	 * 
+	 * Test
+	 * @param	lien euromillion
+	 * @return 	Rien
+	 * 
+	 * 
+	 * Certaint test ne seront pas lancer (les test fake) pour les tester ajouter @Test 
+	 */
 	
 	private CsvTirageDao dao;
 	private final String link;
