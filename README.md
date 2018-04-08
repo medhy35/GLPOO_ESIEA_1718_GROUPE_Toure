@@ -9,15 +9,21 @@ Il faudra aussi afficher les tirages sous forme de tableau dans votre logiciel. 
 
 ### Liste des membres du projet
 
-* [Toure Mahamadoun Ibrahima] - (équipe de développement)
+* [Toure Mahamadoun Ibrahima] - (Scrum Master)
 * [Thierry Leriche Dessirier] -  (Product Owner)
 * [Falcou Julie] - (Proxy Product Owner)
 * [VARATHARAJAH Iynthurisha] - (équipe de développement)
 * [TCHUENBOU KOMGUEP Gabrielle Renée] - (équipe de développement)
 * [CHAMOINRI Ifuja] - (équipe de développement)
 * [DESRIVIERES Arnaud] - (équipe de développement)
-* [FIRMIN Jacques-Olivier] -  (Scrum Master)
+* [FIRMIN Jacques-Olivier] -  (équipe de développement)
 
+
+Lancement
+--------
+
+Télécharger le projet et l'ouvrir avec Eclipse veuillez l'executer avec maven pré installer sur eclipse 
+ensuite suivre le guide present dans le Rapport de Projet 
 
 
 Compiler
@@ -58,11 +64,6 @@ Ceci est la liste des dépendances utilisé pour le projet.
 | Log4j | [https://mvnrepository.com/artifact/log4j/log4j][log4j] |
 
 
-### To-do
-
- - Ecriture des test
- - Chargement du csv
-
 License
 ----
 
@@ -71,7 +72,7 @@ ESIEA 2017-2018
    [Toure Mahamadoun Ibrahima]: <https://www.linkedin.com/in/mahamadoun-ibrahima-toure-98081b114/>
    [Thierry Leriche Dessirier]: <https://www.linkedin.com/in/thierryler/>
    [Falcou Julie]: <https://www.linkedin.com/in/julie-falcou-29b4b4140/>
-   [VARATHARAJAH Iynthurisha]: <http://daringfireball.net/projects/markdown/>
+   [VARATHARAJAH Iynthurisha]: <#>
    [TCHUENBOU KOMGUEP Gabrielle Renée]: <https://www.linkedin.com/in/gabrielle-renée-tchuenbou-komguep-423a6a89/>
    [CHAMOINRI Ifuja]: <https://www.linkedin.com/in/ifuja-chamoinri-771447154/>
    [DESRIVIERES Arnaud]: <#>
