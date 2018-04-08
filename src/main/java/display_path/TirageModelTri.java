@@ -1,6 +1,6 @@
 /*
  * Author: Gabrielle
- * Modèle utilisant une liste de tirage quelconque
+ * Modï¿½le utilisant une liste de tirage quelconque
  * 
  */
 
@@ -19,17 +19,15 @@ import treatement.Tirage;
 
 public class TirageModelTri extends AbstractTableModel {
 	
-	/**
-	 * serialVersionUID
-	 */
+	
 	private static final long serialVersionUID = -3646020503541667369L;
 
-	// Entête des colonnes
-	private final String[] entete = { "N° tirage", "N° MyMillion", "Jour", "Date", "Boule 1", "Boule 2", "Boule 3",
+	// Entï¿½te des colonnes
+	private final String[] entete = { "Nï¿½ tirage", "Nï¿½ MyMillion", "Jour", "Date", "Boule 1", "Boule 2", "Boule 3",
 			"Boule 4", "Boule 5", "Etoile 1", "Etoile 2" };
 	// Tableau de tirages
 	private ArrayList<Tirage> listTirage;
-	// Définition du mode d'affichage des dates
+	// Dï¿½finition du mode d'affichage des dates
 	SimpleDateFormat dateFormat = new SimpleDateFormat("EEEEEEEE");
 
 	// Constructeur
@@ -45,7 +43,7 @@ public class TirageModelTri extends AbstractTableModel {
 		return entete.length;
 	}
 
-	// Définition du nom des colonnes
+	// Dï¿½finition du nom des colonnes
 	@Override
 	public String getColumnName(int columnIndex) {
 		return entete[columnIndex];
@@ -58,8 +56,8 @@ public class TirageModelTri extends AbstractTableModel {
 	}
 
 	/*
-	 * Récupération des tirages et des attributs de chaque tirage. On place chaque
-	 * élément dans la liste et la colonne qui lui correspond.
+	 * Rï¿½cupï¿½ration des tirages et des attributs de chaque tirage. On place chaque
+	 * ï¿½lï¿½ment dans la liste et la colonne qui lui correspond.
 	 */
 	@Override
 	public Object getValueAt(int rowIndex, int columnIndex) {
@@ -94,7 +92,7 @@ public class TirageModelTri extends AbstractTableModel {
 		}
 	}
 
-	// Vérification des types de variables
+	// Vï¿½rification des types de variables
 	public Class<?> getColumnClass(int columnIndex) {
 
 		switch (columnIndex) {

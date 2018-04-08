@@ -7,9 +7,9 @@ import java.util.TimeZone;
 public class Simple_tirage implements Tirage{
 	
 	/**
-	 * @author	Gabrielle
+	 * @author	Gabrielle, medhy
 	 * 
-	 * Accès aux données
+	 * Accï¿½s aux donnï¿½es
 	 * @param	Aucun
 	 * @return	Constructeur,getters,setters
 	 */
@@ -17,16 +17,16 @@ public class Simple_tirage implements Tirage{
 	private String myMillion,date,nbTirageCycle,dateForclusion,winBoulesASC,winStarASC;
 	private String[] tirageEuroMillions;
 	
-	//Déclaration variables boules
+	//Dï¿½claration variables boules
 	private Integer winRang1FR,winRang2FR,winRang3FR,winRang4FR,winRang5FR,winRang6FR,winRang7FR,winRang8FR,winRang9FR,winRang10FR,winRang11FR,winRang12FR,winRang13FR;
 	private Integer winRang1EUR,winRang2EUR,winRang3EUR,winRang4EUR,winRang5EUR,winRang6EUR,winRang7EUR,winRang8EUR,winRang9EUR,winRang10EUR,winRang11EUR,winRang12EUR,winRang13EUR;
 	private double rateRang1,rateRang2,rateRang3,rateRang4,rateRang5,rateRang6,rateRang7,rateRang8,rateRang9,rateRang10,rateRang11,rateRang12,rateRang13;
 	
-	//Déclaration variables étoiles
+	//Dï¿½claration variables ï¿½toiles
 	private Integer winRang1Star,winRang2Star,winRang3Star,winRang4Star,winRang5Star,winRang6Star,winRang7Star,winRang8Star,winRang9Star,winRang10Star;
 	private double rateRang1Star,rateRang2Star,rateRang3Star,rateRang4Star,rateRang5Star,rateRang6Star,rateRang7Star,rateRang8Star,rateRang9Star,rateRang10Star;
 	
-	// Format d'entrée défini pour les dates
+	// Format d'entrï¿½e dï¿½fini pour les dates
 	private SimpleDateFormat dateFormatEntry = new SimpleDateFormat("dd/MM/yyyy");
 
 	// Constructeur
@@ -56,7 +56,7 @@ public class Simple_tirage implements Tirage{
 		this.nbTirage = nbTirage;}
 
 	public Date getDate() {
-		// Réseau horaire
+		// Rï¿½seau horaire
 		dateFormatEntry.setTimeZone(TimeZone.getTimeZone("Europe/Paris"));
 		// Date
 		Date newDate = new Date();
@@ -511,7 +511,7 @@ public class Simple_tirage implements Tirage{
 	public void setTirageEuroMillions(String[] tirageEuroMillions) {
 		this.tirageEuroMillions = tirageEuroMillions;}
 
-	// Méthode d'affichage dans la console
+	// Mï¿½thode d'affichage dans la console
 	@Override
 	public String toString() {
 		return "SimpleTirage [nbTirage=" + nbTirage + ", myMillion=" + myMillion + ", date=" + date + ", boule1="

@@ -3,7 +3,7 @@ package treatement;
 import java.util.Date;
 
 /**
-	 * @author	Gabrielle
+	 * @author	Gabrielle,medhy
 	 * 
 	 * Interface getters et setters
 	 * @param	Aucun
@@ -11,16 +11,16 @@ import java.util.Date;
 	 */
 public interface Tirage {
 	
-	Integer getNbTirage(); 				// Numéro de tirage (unique)
-	String getMyMillion(); 				// Numéro My_million	
+	Integer getNbTirage(); 				// Numï¿½ro de tirage (unique)
+	String getMyMillion(); 				// Numï¿½ro My_million	
 	Date getDate(); 					// Date du tirage format jj/mm/aaaa et jour de la semaine
-	// Les 5 boules tirées
+	// Les 5 boules tirï¿½es
 	Integer getBoule1();
 	Integer getBoule2();
 	Integer getBoule3();
 	Integer getBoule4();
 	Integer getBoule5();
-	// Les 2 étoiles tirées
+	// Les 2 ï¿½toiles tirï¿½es
 	Integer getEtoile1();
 	Integer getEtoile2();
 	String getNbTirageCycle();			// Nombre de tirage dans le cycle
@@ -86,6 +86,6 @@ public interface Tirage {
 	double getRateRang9Star();			// Rapport du Rang9 Etoile+
 	Integer getWinRang10Star();			//Nombre de gagnants du Rang10 Etoile+
 	double getRateRang10Star();			// Rapport du Rang10 Etoile+
-	String[] getTirageEuroMillions();	// Numéro tirage exceptionnel Euromillions
+	String[] getTirageEuroMillions();	// Numï¿½ro tirage exceptionnel Euromillions
 	
 }

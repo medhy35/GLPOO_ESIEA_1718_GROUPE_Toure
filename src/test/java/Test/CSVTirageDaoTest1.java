@@ -29,6 +29,16 @@ import treatement.CsvTirageDao;
 
 
 public class CSVTirageDaoTest1 {
+	/**
+	 * @author 	Medhy
+	 * 
+	 * Test
+	 * @param	lien euromillion
+	 * @return 	Rien
+	 * 
+	 * 
+	 * Certaint test ne seront pas lancer (les test fake) pour les tester ajouter @Test 
+	 */
 	
 	private CsvTirageDao dao;
 	private final String link;
@@ -145,7 +155,7 @@ public class CSVTirageDaoTest1 {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
 		String dateInString = "12-09-2017 00:00:00";
 		Date date = sdf.parse(dateInString);
-		//System.out.println(date);
+		
 		
 		
 		final Date date1 = dao.findAllTirages().get(100).getDate();
@@ -160,7 +170,7 @@ public class CSVTirageDaoTest1 {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
 		String dateInString = "17-12-2016 00:00:00";
 		Date date = sdf.parse(dateInString);
-		//System.out.println(date);
+		
 		
 		
 		final Date date1 = dao.findAllTirages().get(23).getDate();
